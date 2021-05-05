@@ -37,8 +37,8 @@ def prepare_item(cidr):
     
 def lambda_handler(event, context):
     # Initialize the Cosmos client
-    endpoint = "https://firstcosmosdb001.documents.azure.com:443/"
-    key = 'yXU2BfeEpzatf9momGxqPJIEcG4aXydjYSSauKEKyRLJQv6qYRHJ2oV4ccJoIzpMbPXGRtmdyywq2EwcsHLK2g=='
+    endpoint = "https://<db-name>.documents.azure.com:443/"
+    key = '<primary-key>'
     
     # <create_cosmos_client>
     client = CosmosClient(endpoint, key)
