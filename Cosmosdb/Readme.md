@@ -7,8 +7,8 @@
 - Databases contains many containers(tables)
 
 ### Sample basic python cosmosdb example :
-https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-python
-https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-python-samples
+- https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-python
+- https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-python-samples
 
 ### Python code for basic actions on cosmosdb
 https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/cosmos/azure-cosmos/samples/document_management.py#L81-L88
