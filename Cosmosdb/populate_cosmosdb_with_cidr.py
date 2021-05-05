@@ -30,15 +30,16 @@ def prepare_item(cidr):
         "service" : service,
         "owner": owner,
         "AssignedBy" : AssignedBy,
-        "manual_script" : manual_script
+        "manual_script" : manual_script,
+        "cidr":cidr
     }
     return item
     
     
 def lambda_handler(event, context):
     # Initialize the Cosmos client
-    endpoint = "https://<db-name>.documents.azure.com:443/"
-    key = '<primary-key>'
+    endpoint = "https://firstcosmosdb001.documents.azure.com:443/"
+    key = 'yXU2BfeEpzatf9momGxqPJIEcG4aXydjYSSauKEKyRLJQv6qYRHJ2oV4ccJoIzpMbPXGRtmdyywq2EwcsHLK2g=='
     
     # <create_cosmos_client>
     client = CosmosClient(endpoint, key)
@@ -65,13 +66,13 @@ def lambda_handler(event, context):
     items_to_create_list=[]
     m=0
     count=0
-    while(m<7):
+    while(m<1):
         n=0
         while(n<256):
             #print(f'10.{m}.{n}.0/20')
-            n+=16
             count+=1
             items_to_create_list.append(prepare_item(f'10.{m}.{n}.0/20'))
+            n+=16
         m+=1
         
     print(count)
